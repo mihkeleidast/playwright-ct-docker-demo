@@ -1,0 +1,24 @@
+{
+  "name": "playwright-ct-docker-demo",
+  "version": "1.0.0",
+  "description": "Demo for running playwright component tests with a browser in a docker container",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test -c playwright.config.ts"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.50.1",
+    "@types/ip": "^1.1.3",
+    "@types/node": "^22.13.9",
+    "docker-compose": "^1.1.1",
+    "ip": "^2.0.1"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

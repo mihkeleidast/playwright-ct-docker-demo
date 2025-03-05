@@ -1,0 +1,12 @@
+version: '3'
+services:
+  playwright:
+    ports:
+      - 1212:1212
+    init: true
+    stdin_open: true
+    tty: true
+    working_dir: /home/pwuser
+    user: pwuser
+    image: mcr.microsoft.com/playwright:v1.50.1-jammy
+    command: /bin/sh -c "npx -y playwright@1.50.1 run-server --port 1212 --host 0.0.0.0"
