@@ -10,7 +10,8 @@ export default defineConfig({
   globalTeardown: process.env.CI ? undefined : './playwright/global-teardown.ts',
   testDir: './',
   /* The base directory, relative to the config file, for snapshot files created with toMatchSnapshot and toHaveScreenshot. */
-  snapshotDir: './__snapshots__',
+  snapshotDir: '.',
+  snapshotPathTemplate: '{testDir}/{testFileDir}/__image_snapshots__/{arg}{ext}',
   /* Maximum time one test can run for. */
   timeout: 10 * 1000,
   /* Run tests in files in parallel */
