@@ -31,15 +31,11 @@ export default defineConfig({
 
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
-    ctViteConfig: {
-      preview: {
-        host: ip.address(),
-      },
-    },
 
     connectOptions: {
       wsEndpoint: 'ws://127.0.0.1:1212',
       timeout: 10000,
+      exposeNetwork: 'host.docker.internal,<loopback>'
     },
   },
 
